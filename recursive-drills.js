@@ -54,7 +54,10 @@ function split(str, sep) {
 //best case: O(1), if idx is === -1 
 //worst case: O(n), bc the amount of recursion calls is dependent on the arguments
 
+let count = 0
+
 function convertToBinary(num){
+    count++
     if(num>0){
         let binary = Math.floor(num%2); //save the reminder in binary
 		//divide the number by 2 and send that to the function again
@@ -66,6 +69,8 @@ function convertToBinary(num){
 }
 //best case: O(1), if num is greater than 0
 //worst case: O(log(n)), each recursive call splits num in half 
+// convertToBinary(1000000248)
+// console.log('count:', count)
 
 function factorial(n) {  
     // Base Case - when n is equal to 0, we stop the recursion
@@ -115,7 +120,7 @@ function printAnagram(word){
 
 }
 
-printAnagram('helloo');
+// printAnagram('helloo');
 //best case: O(1), if str.length <= 1
 //worst case: O(n!), each time the loop runs the function is recursively calling itself (factorial)
 
@@ -227,8 +232,8 @@ function traverseB(node, indent=0) {
 		traverseB(node[key], indent + 4);
 	}
 }
-traverseB(organization)
-console.log('tick:', tick);
+// traverseB(organization)
+// console.log('tick:', tick);
 //best case: O(n)
 //worst case: O(n), the time complexity is dependent on node 
 

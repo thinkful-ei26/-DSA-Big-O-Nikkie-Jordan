@@ -37,7 +37,6 @@ function triangle(n) {
     }
     return tot;
 }
-
 //best case: O(n)
 //worst case: O(n)
 
@@ -52,25 +51,25 @@ function split(str, sep) {
     ret.push(str);
     return ret;
 }
-
 //best case: O(n)
 //worst case: O(n)
+
 let tick = 0
 function convertToBinaryIter(num){
     var binary = '';
     while(num>0){
-        // tick++
+        tick++
         let rem = Math.floor(num%2);
         binary = rem + binary;
         num = Math.floor(num/2);
     }
     return binary;
 }
-// console.log(convertToBinaryIter(248)); //1111100
-// // convertToBinaryIter(126)
-// console.log('tick:', tick)
+console.log(convertToBinaryIter(1000000248)); //1111100
+// convertToBinaryIter(126)
+console.log('tick:', tick)
 //best case: O(n)
-//worst case: O(n)
+//worst case: O(log(n))
 
 function factorialIterative(number){
     let fact = 1;
